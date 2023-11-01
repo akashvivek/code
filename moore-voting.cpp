@@ -1,4 +1,4 @@
-//Algorithm
+//Algorithm 
 //Take first elemnt of array and make it count 1
 //whenever element equal to current value increase count by 1 else decrease by 1
 // proceed further till count become zero
