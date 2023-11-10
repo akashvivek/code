@@ -24,11 +24,11 @@
 -
 
    1. First check whether character is present in current trie node or not
-   ```sh
-    bool containKey(char ch) {
-		return (links[ch - 'a'] != NULL);
-	 } 
-   ```
+	  ```sh
+	    bool containKey(char ch) {
+			return (links[ch - 'a'] != NULL);
+		 } 
+	   ```
   
    2. If present then move to node to which it is pointing
 ```sh
@@ -53,4 +53,25 @@
 		flag = true;
 	}
  ```
+
+### Searching
+- Check if current character is present in trie node or not, If not present means that character in trie will be pointing to null
+    ```sh
+    bool containKey(char ch) {
+	return (links[ch - 'a'] != NULL);
+	 } 
+   ```
+- If not present return false, else move to node to which it is pointing
+   ```sh
+   Node *get(char ch) {
+		return links[ch - 'a'];
+	  }
+   ```
+- Repeat above process untill string traversed completly.
+- Check if current trie node flag is true then return true else false, as true means a string is completed here.
+  ```sh
+  bool isEnd() {
+		return flag;
+	}
+   ```
     
